@@ -1,0 +1,5 @@
+*.o
+*.d
+fiford01
+fifowr01
+mkfifo01
