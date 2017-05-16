@@ -27,5 +27,6 @@ int main( int argc, char *argv[] )
     printf("Write to pipe %d bytes\n", wb);
     SYSCALLREPORTSETRETURN( wb, write(fd,messageBuffer,s), 1 );
     printf("Write to pipe %d bytes\n", wb);
+    SYSCALLREPORT( close(fd) )
     return 0;
 }

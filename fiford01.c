@@ -27,5 +27,6 @@ int main( int argc, char *argv[] )
     SYSCALLREPORTSETRETURN( rb, read(fd,messageBuffer,msgSize), 1 );
     printf( "Readed bytes: %d\n", rb );
     printf( "%s\n", messageBuffer );
+    SYSCALLREPORT( close(fd) )
     return 0;
 }
