@@ -1,6 +1,22 @@
 #ifndef __MYCONST_H_
 #define __MYCONST_H_
 
+/**
+ * Maximum length of buffer for (a|c)time calls.
+ */
+#define MAX_LENGTH_CTIME 32
+
+/**
+ * Maximum length of buffer for text repersentation
+ * of struct ipc_perm
+ */
+#define MAX_LENGTH_IPCPERM 72
+
+/**
+ * Maximum length of buffer for text repersentation
+ * of struct shmid_ds
+ */
+#define MAX_LENGTH_SHMID_DS 512
 
 /**
  * mkfifo - command
@@ -18,6 +34,27 @@
  * Define the maximum length of message for sending through the fifo pipes
  */
 #define MAX_FIFO_MESSAGE_SIZE 2048
+
+
+/**
+ * ftok path name
+ */
+#define FTOK_PATH "../README.md"
+
+/**
+ * ftok project Id shared memory type 01
+ */
+#define FTOK_SHM_01 1
+
+/**
+ * System V shared memory size
+ */
+#define SYSV_SHM_SIZE 0x8000
+
+/**
+ * System V shared memory protect mode
+ */
+#define SYSV_SHM_PROTMODE 0600
 
 /**
  * Call system call statement if return value is negative just report
