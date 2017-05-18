@@ -1,6 +1,7 @@
 *.o
 *.d
 *.so
+.gdbinit
 fiford01
 fifowr01
 mkfifo01
