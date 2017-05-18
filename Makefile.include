@@ -1,0 +1,23 @@
+CPP=/usr/bin/cpp
+CC=/usr/bin/gcc
+cc=/usr/bin/gcc
+
+%.d : %.c
+	$(CPP) $(CFLAGS) -M $^ > $@
+
+
+# Compiler Flags.
+DEBUG=-g
+OPTIMIZE=-O2
+CCFLAGS=-fPIC
+INCLUDES=
+CFLAGS:=$(GFLAG) $(OPTIMIZE) $(DEBUG) $(CCFLAGS) $(INCLUDES) $(PROJECT_INCLUDE) $(PROJECT_DEFINES)
+
+# Libraries.
+THREADLIBS=
+EXSYSLIBS=
+MATHLIB=
+LIBS=$(EXSYSLIBS) $(MATHLIB) $(USRLIBS)
+LIBS:=$(LIBS) $(PROJECT_LIBPATH) $(PROJECT_LIB)
+
+LDFLAGS=$(LIBS)
