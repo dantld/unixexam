@@ -1,6 +1,5 @@
 .DEFAULT_GOAL=all
 DEPENDS=$(patsubst %c,%d,$(wildcard *.c))
-DEPENDS2=$(patsubst %c,%d,$(wildcard ../common/*.c))
 
 ifneq ($(MAKECMDGOALS),)
 MAKECMDGOALS=all
@@ -8,5 +7,4 @@ endif
 
 ifneq ($(MAKECMDGOALS),clean)
 include $(DEPENDS)
-include $(DEPENDS2)
 endif
