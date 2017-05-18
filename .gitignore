@@ -1,5 +1,6 @@
 *.o
 *.d
+*.so
 fiford01
 fifowr01
 mkfifo01
